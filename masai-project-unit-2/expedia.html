@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!---title of the page-->
+    <title>Expedia</title>
+
+    <!----font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+    <style>
+        * {
+            font-family: 'Lato', sans-serif;
+        }
+        
+        header {
+            width: 100%;
+            margin-top: 1%;
+            ;
+        }
+        
+        .navbar {
+            display: inline-block;
+            margin-left: 50%;
+        }
+        
+        .navbar>a:nth-child(1) {
+            color: #546E7A;
+            text-decoration: none;
+        }
+        
+        .navbar>a:nth-child(2) {
+            margin-left: 20px;
+            color: #546E7A;
+            text-decoration: none;
+        }
+        
+        .navbar>a:nth-child(3) {
+            margin-left: 20px;
+            color: #546E7A;
+            text-decoration: none;
+        }
+        
+        .navbar>#btn {
+            margin-left: 20px;
+            color: #546E7A;
+            border: none;
+            text-decoration: none;
+            background-color: white;
+            font-size: 15px;
+        }
+        
+        select {
+            border: none;
+            margin-left: 30px;
+        }
+        
+        #medium {
+            width: 70%;
+            ;
+            margin-left: 15%;
+            display: grid;
+            grid-template-columns: 200px 200px 200px 200px 200px;
+            grid-template-rows: 120px;
+        }
+        
+        #stay {
+            margin-left: 150px;
+        }
+        
+        #flight {
+            margin-left: 150px;
+        }
+        
+        #car {
+            margin-left: 150px;
+        }
+        
+        #suitcase {
+            margin-left: 150px;
+        }
+        
+        #packages {
+            margin-left: 150px;
+        }
+        
+        #stay>i {
+            font-size: 25px;
+        }
+        
+        #flight>i {
+            font-size: 25px;
+        }
+        
+        #car>i {
+            font-size: 25px;
+        }
+        
+        #suitcase>i {
+            font-size: 25px;
+        }
+        
+        #packages>i {
+            font-size: 25px;
+        }
+        
+        #holiday {
+            background-image: url("https://images.unsplash.com/photo-1519055676067-4f45655f6f4a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjJ8fGElMjBtYW4lMjB3aXRoJTIwaGF0JTIwYW5kJTIwYmVhY2h8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+            height: 250px;
+            width: 70%;
+            border: 1px solid black;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-left: 15%;
+        }
+        
+        #holiday>div {
+            margin-top: 17%;
+        }
+        
+        #cont-2 {
+            height: 300px;
+            width: 80%;
+            ;
+            display: flex;
+            flex-direction: row;
+            margin-left: 10%;
+        }
+        
+        .qr {
+            margin-left: 50px;
+            margin-top: 50px;
+            flex-basis: 100px;
+        }
+        
+        #beach {
+            margin-left: 15px;
+        }
+        
+        h4 {
+            margin-left: 40%;
+        }
+        
+        .pointer {
+            width: 95%;
+            display: grid;
+            grid-template-columns: repeat(5, 200px);
+            grid-template-rows: repeat(9, 30px);
+            grid-column-gap: 5%;
+            grid-row-gap: 3%;
+            height: 350px;
+            padding: 10px;
+            background-color: #ECEFF1;
+            margin-left: 20px;
+        }
+        
+        #line {
+            margin-top: 80px;
+            margin-left: 100px;
+            height: 1px;
+            width: 80%;
+            background-color: #90A4AE;
+        }
+        
+        .dropbtn {
+            background-color: #3498DB;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .dropbtn:hover,
+        .dropbtn:focus {
+            background-color: #2980B9;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown a:hover {
+            background-color: #ddd;
+        }
+        
+        .show {
+            display: block;
+        }
+        
+        #demo {
+            background-image: url("https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+            height: 300px;
+            background-size: cover;
+        }
+        
+        #medium {
+            padding: 30px;
+            border-radius: 10px;
+            background-color: white;
+        }
+        
+        #holiday>div {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://www.expedia.co.in/_dms/header/logo.svg?locale=en_GB&siteid=27&2" style="margin-left:5% ;display: inline-block;" />
+        <select>
+            <option value="More travel" >More travel</option>
+            <option value="Flights">Flights</option>
+            <option value="Cars">Cars</option>
+            <option value="Packages">Pacakages</option>
+            <option value="Stays">Stays</option>
+            <option value="Deals">Deals</option>
+            <option value="Group & meetings">Group & meetings</option>
+            <option value="Mobile">Mobile</option>                      
+        </select>
+        <nav class="navbar">
+            <a href="#English"><span style="margin-right:10px"><i class="fas fa-globe" id="language"></i></span>English</a>
+            <a href="#Support">Support</a>
+            <a href="#Trips">Trips</a>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Sign in</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <p>Members can access discounts, points and special features</p>
+                    <a href="signin.html">Sign in</a>
+                    <a href="createacount.html">Create Free Acount</a>
+                    <p>List of Favourites</p>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <ul id="demo">
+        <div id="medium">
+            <div id="stay">
+                <i class="fas fa-building"></i>
+                <P>Stays</P>
+            </div>
+            <div id="flight">
+                <i class="fas fa-plane"></i>
+                <p>Flights</p>
+            </div>
+            <div id="car">
+                <i class="fas fa-car"></i>
+                <p>Cars</p>
+            </div>
+            <div id="suitcase">
+                <i class="fas fa-suitcase"></i>
+                <p>Packages</p>
+            </div>
+            <div id="packages">
+                <i class="fas fa-ticket-alt"></i>
+                <P>Things to do</P>
+            </div>
+
+        </div>
+    </ul>
+    <div id="holiday">
+        <div>
+            <P>Plan ahead and save</P>
+            <h3>Book 60% in advance for 20% off select stays</h3>
+        </div>
+    </div>
+    <div id="cont-2">
+        <div id="sat">
+            <img src="https://a.travel-assets.com/mad-service/header/takeover/expedia_marquee_refresh.jpg" style="width:400px;height:300px;" />
+        </div>
+        <div id="beach">
+            <h2>Supercharge your planning powers</h2>
+            <p>Use the Expedia app to organise your entire trip and find app deals on the go</p>
+            <h3>Text yourself a download link</h3>
+            <form>
+                <select name="countryCode " id=" ">
+                    <option data-countryCode="GB " value="44 " Selected>UK (+44)</option>
+                    <option data-countryCode="US " value="1 ">USA (+1)</option>
+                    <optgroup label="Other countries ">
+                        <option data-countryCode="DZ " value="213 ">Algeria (+213)</option>
+                        <option data-countryCode="AD " value="376 ">Andorra (+376)</option>
+                        <option data-countryCode="AO " value="244 ">Angola (+244)</option>
+                        <option data-countryCode="AI " value="1264 ">Anguilla (+1264)</option>
+                        <option data-countryCode="AG " value="1268 ">Antigua &amp; Barbuda (+1268)</option>
+                        <option data-countryCode="AR " value="54 ">Argentina (+54)</option>
+                        <option data-countryCode="AM " value="374 ">Armenia (+374)</option>
+                        <option data-countryCode="AW " value="297 ">Aruba (+297)</option>
+                        <option data-countryCode="AU " value="61 ">Australia (+61)</option>
+                        <option data-countryCode="AT " value="43 ">Austria (+43)</option>
+                        <option data-countryCode="AZ " value="994 ">Azerbaijan (+994)</option>
+                        <option data-countryCode="BS " value="1242 ">Bahamas (+1242)</option>
+                        <option data-countryCode="BH " value="973 ">Bahrain (+973)</option>
+                        <option data-countryCode="BD " value="880 ">Bangladesh (+880)</option>
+                        <option data-countryCode="BB " value="1246 ">Barbados (+1246)</option>
+                        <option data-countryCode="BY " value="375 ">Belarus (+375)</option>
+                        <option data-countryCode="BE " value="32 ">Belgium (+32)</option>
+                        <option data-countryCode="BZ " value="501 ">Belize (+501)</option>
+                        <option data-countryCode="BJ " value="229 ">Benin (+229)</option>
+                        <option data-countryCode="BM " value="1441 ">Bermuda (+1441)</option>
+                        <option data-countryCode="BT " value="975 ">Bhutan (+975)</option>
+                        <option data-countryCode="BO " value="591 ">Bolivia (+591)</option>
+                        <option data-countryCode="BA " value="387 ">Bosnia Herzegovina (+387)</option>
+                        <option data-countryCode="BW " value="267 ">Botswana (+267)</option>
+                        <option data-countryCode="BR " value="55 ">Brazil (+55)</option>
+                        <option data-countryCode="BN " value="673 ">Brunei (+673)</option>
+                        <option data-countryCode="BG " value="359 ">Bulgaria (+359)</option>
+                        <option data-countryCode="BF " value="226 ">Burkina Faso (+226)</option>
+                        <option data-countryCode="BI " value="257 ">Burundi (+257)</option>
+                        <option data-countryCode="KH " value="855 ">Cambodia (+855)</option>
+                        <option data-countryCode="CM " value="237 ">Cameroon (+237)</option>
+                        <option data-countryCode="CA " value="1 ">Canada (+1)</option>
+                        <option data-countryCode="CV " value="238 ">Cape Verde Islands (+238)</option>
+                        <option data-countryCode="KY " value="1345 ">Cayman Islands (+1345)</option>
+                        <option data-countryCode="CF " value="236 ">Central African Republic (+236)</option>
+                        <option data-countryCode="CL " value="56 ">Chile (+56)</option>
+                        <option data-countryCode="CN " value="86 ">China (+86)</option>
+                        <option data-countryCode="CO " value="57 ">Colombia (+57)</option>
+                        <option data-countryCode="KM " value="269 ">Comoros (+269)</option>
+                        <option data-countryCode="CG " value="242 ">Congo (+242)</option>
+                        <option data-countryCode="CK " value="682 ">Cook Islands (+682)</option>
+                        <option data-countryCode="CR " value="506 ">Costa Rica (+506)</option>
+                        <option data-countryCode="HR " value="385 ">Croatia (+385)</option>
+                        <option data-countryCode="CU " value="53 ">Cuba (+53)</option>
+                        <option data-countryCode="CY " value="90392 ">Cyprus North (+90392)</option>
+                        <option data-countryCode="CY " value="357 ">Cyprus South (+357)</option>
+                        <option data-countryCode="CZ " value="42 ">Czech Republic (+42)</option>
+                        <option data-countryCode="DK " value="45 ">Denmark (+45)</option>
+                        <option data-countryCode="DJ " value="253 ">Djibouti (+253)</option>
+                        <option data-countryCode="DM " value="1809 ">Dominica (+1809)</option>
+                        <option data-countryCode="DO " value="1809 ">Dominican Republic (+1809)</option>
+                        <option data-countryCode="EC " value="593 ">Ecuador (+593)</option>
+                        <option data-countryCode="EG " value="20 ">Egypt (+20)</option>
+                        <option data-countryCode="SV " value="503 ">El Salvador (+503)</option>
+                        <option data-countryCode="GQ " value="240 ">Equatorial Guinea (+240)</option>
+                        <option data-countryCode="ER " value="291 ">Eritrea (+291)</option>
+                        <option data-countryCode="EE " value="372 ">Estonia (+372)</option>
+                        <option data-countryCode="ET " value="251 ">Ethiopia (+251)</option>
+                        <option data-countryCode="FK " value="500 ">Falkland Islands (+500)</option>
+                        <option data-countryCode="FO " value="298 ">Faroe Islands (+298)</option>
+                        <option data-countryCode="FJ " value="679 ">Fiji (+679)</option>
+                        <option data-countryCode="FI " value="358 ">Finland (+358)</option>
+                        <option data-countryCode="FR " value="33 ">France (+33)</option>
+                        <option data-countryCode="GF " value="594 ">French Guiana (+594)</option>
+                        <option data-countryCode="PF " value="689 ">French Polynesia (+689)</option>
+                        <option data-countryCode="GA " value="241 ">Gabon (+241)</option>
+                        <option data-countryCode="GM " value="220 ">Gambia (+220)</option>
+                        <option data-countryCode="GE " value="7880 ">Georgia (+7880)</option>
+                        <option data-countryCode="DE " value="49 ">Germany (+49)</option>
+                        <option data-countryCode="GH " value="233 ">Ghana (+233)</option>
+                        <option data-countryCode="GI " value="350 ">Gibraltar (+350)</option>
+                        <option data-countryCode="GR " value="30 ">Greece (+30)</option>
+                        <option data-countryCode="GL " value="299 ">Greenland (+299)</option>
+                        <option data-countryCode="GD " value="1473 ">Grenada (+1473)</option>
+                        <option data-countryCode="GP " value="590 ">Guadeloupe (+590)</option>
+                        <option data-countryCode="GU " value="671 ">Guam (+671)</option>
+                        <option data-countryCode="GT " value="502 ">Guatemala (+502)</option>
+                        <option data-countryCode="GN " value="224 ">Guinea (+224)</option>
+                        <option data-countryCode="GW " value="245 ">Guinea - Bissau (+245)</option>
+                        <option data-countryCode="GY " value="592 ">Guyana (+592)</option>
+                        <option data-countryCode="HT " value="509 ">Haiti (+509)</option>
+                        <option data-countryCode="HN " value="504 ">Honduras (+504)</option>
+                        <option data-countryCode="HK " value="852 ">Hong Kong (+852)</option>
+                        <option data-countryCode="HU " value="36 ">Hungary (+36)</option>
+                        <option data-countryCode="IS " value="354 ">Iceland (+354)</option>
+                        <option data-countryCode="IN " value="91 ">India (+91)</option>
+                        <option data-countryCode="ID " value="62 ">Indonesia (+62)</option>
+                        <option data-countryCode="IR " value="98 ">Iran (+98)</option>
+                        <option data-countryCode="IQ " value="964 ">Iraq (+964)</option>
+                        <option data-countryCode="IE " value="353 ">Ireland (+353)</option>
+                    </optgroup>
+                </select>
+                <input type="text " />
+                <button>Get the app</button>
+            </form>
+            <P style="width:400px;font-size: 15px;">By providing your number, you agree to receive a one-time automated text message with a link to get the app. Standard text message rates may apply.</P>
+        </div>
+        <div class="qr">
+            <img src="https://a.travel-assets.com/mad-service/qr-code/footer_qr/27_QR_FOOTER.png" style="height:150px;width:150px;" />
+            <p style="margin-left:20px;">Scan the QR code</p>
+        </div>
+    </div>
+    <h4>Explore a world of travel with Expedia</h4>
+    <h4>Discover new places and experiences</h4>
+    <div class="pointer">
+        <div><img src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg"></div>
+        <div>Company</div>
+        <div>Explore</div>
+        <div>Terms and Policies</div>
+        <div>Help</div>
+        <div></div>
+        <div>About Us</div>
+        <div>India travel guide</div>
+        <div>Privacy Statement</div>
+        <div>Support</div>
+        <div></div>
+        <div>Jobs</div>
+        <div>Hotels in India</div>
+        <div>Terms of use</div>
+        <div>Change or cancel your booking</div>
+        <div></div>
+        <div>List your property</div>
+        <div>Holiday rentals in India</div>
+        <div></div>
+        <div>Refund process and timelines</div>
+        <div></div>
+        <div>Partnerships</div>
+        <div>Holiday packages in India</div>
+        <div></div>
+        <div>Book a flight using an airline credit</div>
+        <div></div>
+        <div></div>
+        <div>Domestic flights</div>
+        <div></div>
+        <div>International travel documents</div>
+        <div></div>
+        <div></div>
+        <div>Car hire in India</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>All accommodation types</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>Travel blog</div>
+    </div>
+    <div id="line"></div>
+    <div>
+        <img src="https://thumbnails.trvl-media.com/DJpMY9W-yLbhqAzbOMWy4M_j1OU=/images.trvl-media.com/media/content/expind/images/sg/secure.png" style="margin-left:45%;margin-top: 50px;" />
+        <P style="font-size:12px;color:#455A64;margin-left:150px;">© 2021 Expedia, Inc., an Expedia Group company / Expedia Asia Holdings Mauritius / BEX Travel Asia Pte. Ltd. All rights reserved. Expedia and the Airplane Logo are trademarks or registered trademarks of Expedia, Inc.</P>
+    </div>
+    <script>
+        var stay = document.getElementById("stay");
+        stay.addEventListener("click", stay1);
+        var count_stay = 0;
+
+        function stay1() {
+            if (count_stay > 0) {
+                stay.removeEventListener(stay1)
+            }
+            count_stay++
+            var ul = document.getElementById("demo");
+            var li = document.createElement("li");
+            li.innerHTML = "";
+            li.innerHTML = `<form style="width:62%;padding:50px;border-radius:5px;">
+        <i style="position:absolute;margin-top:10px;padding-left:15px;" class="fa fa-map-marker"></i>
+        <input style="width:250px;height:30px;border-radius: 5px;text-align:center;font-size:20px;" type="text" id="going" placeholder="Going to">
+        <input style="width:200px;height:30px;border-radius: 5px;" type="date" placeholder="checkin" id="checkin">
+        <input style="width:200px;height:30px;border-radius: 5px;" type="date" placeholder="checkout" id="checkout">
+        <i style="position:absolute;;margin-top:10px;padding-left:15px; " class="fas fa-user"></i>
+        <input style="width:220px;height:30px;border-radius: 5px;text-align:center;font-size:20px;" type="text" placeholder="Travellers" id="travellers">
+        <button id="newbtn" style="margin-left:45%;margin-top:30px;width:150px;height:40px;border-radius: 15px;font-size:15px;border:2px solid white;color:white;background-color:#3F51B5">Search</button>
+
+
+    </form>`
+
+            ul.append(li);
+
+        }
+        var flight = document.getElementById("flight");
+        flight.addEventListener("click", flight1);
+        var count_flight = 0;
+
+        function flight1() {
+            if (count_flight > 0)
+                return;
+            count_flight++;
+            var ul = document.getElementById("demo");
+            var li = document.createElement("li");
+            li.innerHTML = "";
+            li.innerHTML = `  <form style="width:70%;padding:50px;border-radius:5px;background-color:#ECF0F1 ;">
+        <div style="display:flex;flex-direction: row;justify-content: space-evenly;">
+            <label id="Return" style="border-radius:5px;width:60px;height:30px;background-color:#3949AB ;color:blanchedalmond;padding-left:5px;">Return</label>
+            <label id="Oneway" style="border-radius:5px;width:60px;height:30px;background-color:#3949AB ;color:blanchedalmond;padding-left:5px;">Oneway</label>
+            <label id="MultiCity" style="border-radius:5px;width:60px;height:30px;background-color:#3949AB ;color:blanchedalmond;padding-left:5px;">MultiCity</label>
+        </div>
+        <div>
+            <i style="position:absolute;margin-top:10px;padding-left:15px;" class="fa fa-map-marker"></i>
+            <input style="width:250px;height:30px;border-radius: 5px;text-align:center;font-size:20px;" type="text" id="going" placeholder="Leaving From">
+            <i class="fas fa-exchange-alt"></i>
+            <i style="position:absolute;margin-top:10px;padding-left:15px;" class="fa fa-map-marker"></i>
+            <input style="width:250px;height:30px;border-radius: 5px;text-align:center;font-size:20px;" type="text" id="going" placeholder="Going to">
+            <input style="width:200px;height:30px;border-radius: 5px;" type="date" placeholder="checkin" id="checkin">
+            <input style="width:200px;height:30px;border-radius: 5px;" type="date" placeholder="checkout" id="checkout">
+            <button id="newbtn" style="margin-left:45%;margin-top:30px;width:150px;height:40px;border-radius: 15px;font-size:15px;border:2px solid white;color:white;background-color:#3F51B5">Search</button>
+
+        </div>
+    </form>  `
+
+            ul.append(li);
+
+        }
+        var things = document.getElementById("packages");
+        things.addEventListener("click", thingstodo);
+        var count_things = 0
+
+        function thingstodo() {
+            if (count_things > 0) {
+                return;
+            }
+            count_things++
+            var ul = document.getElementById("demo");
+            var li = document.createElement("li");
+            li.innerHTML = " ";
+            li.innerHTML = `
+    </form>
+    <form style="width:62%;padding:50px;border-radius:5px;border-radius:5px;background-color: #ECF0F1;">
+        <i style="position:absolute;margin-top:10px;padding-left:15px;" class="fa fa-map-marker"></i>
+        <input style="width:250px;height:30px;border-radius: 5px;text-align:center;font-size:20px;" type="text" id="going" placeholder="Things to do in">
+        <input style="width:200px;height:30px;border-radius: 5px;margin-left:30px;" type="date" placeholder="checkin" id="checkin">
+        <input style="width:200px;height:30px;border-radius: 5px;margin-left:30px;" type="date" placeholder="checkout" id="checkout">
+        <button id="newbtn" style="margin-left:35%;margin-top:30px;width:150px;height:40px;border-radius: 15px;font-size:15px;border:2px solid white;color:white;background-color:#3F51B5">Search</button>
+
+    </form>`
+
+            ul.append(li);
+
+        }
+        var cars = document.getElementById("car");
+        var count_car = 0;
+        cars.addEventListener("click", car_content);
+
+        function car_content() {
+            if (count_car > 0) {
+                return;
+            }
+            count_car++
+            var ul = document.getElementById("demo");
+            var li = document.createElement("li");
+            li.innerHTML = "";
+            li.innerHTML = ` <form style="width:60%;padding:50px;border-radius:5px;background-color: #ECF0F1;">
+        <div>
+            <label id="Return" style="border-radius:5px;width:60px;height:30px;background-color:#3949AB ;color:blanchedalmond;padding-left:5px;">Return</label>
+            <label id="Oneway" style="border-radius:5px;width:60px;height:30px;background-color:#3949AB ;color:blanchedalmond;padding-left:5px;margin-left:180px">Oneway</label>
+        </div>
+        <div>
+            <i style="position:absolute;margin-top:10px;padding-left:15px;" class="fa fa-map-marker"></i>
+            <input style="width:350px;height:30px;border-radius: 5px;text-align:center;font-size:20px;" type="text" id="going" placeholder="Pick up">
+            <input style="width:350px;height:30px;border-radius: 5px;text-align:center;font-size:20px;margin-left: 30px;" type="text" id="going" placeholder="Same as Pick up">
+
+        </div>
+        <div style="display:flex;margin-top:20px">
+            <input style="width:200px;height:30px;border-radius: 5px;" type="date" placeholder="checkin" id="checkin">
+            <input style="width:200px;height:30px;border-radius: 5px;margin-left:60px" type="date" placeholder="checkout" id="checkout">
+            <input style="margin-left:70px ;border-radius:5px;" type="time" id="appt" name="appt" placeholder="checkintime">
+            <input style="margin-left:60px;;border-radius:5px;" type="time" id="appt" name="appt" placeholder="checkouttime">
+
+        </div>
+        <button id="newbtn" style="margin-left:45%;margin-top:30px;width:150px;height:40px;border-radius: 15px;font-size:15px;border:2px solid white;color:white;background-color:#3F51B5">Search</button>
+
+
+    </form>`
+            ul.append(li);
+        }
+        var packages = document.getElementById("suitcase");
+        var count_packages = 0;
+        packages.addEventListener("click", packages_tr);
+
+        function packages_tr() {
+            if (packages_tr > 0) {
+                return;
+            }
+            count_packages++;
+            var ul = document.getElementById("demo");
+            var li = document.createElement("li");
+            li.innerHTML = "";
+            li.innerHTML = `   <form style="width:62%;padding:50px;border-radius:5px;border-radius:5px;background-color: #ECF0F1;">
+        <i style="position:absolute;margin-top:10px;padding-left:15px;" class="fa fa-map-marker"></i>
+        <input style="width:250px;height:30px;border-radius: 5px;text-align:center;font-size:20px;" type="text" id="going" placeholder="Things to do in">
+        <input style="width:200px;height:30px;border-radius: 5px;margin-left:30px;" type="date" placeholder="checkin" id="checkin">
+        <input style="width:200px;height:30px;border-radius: 5px;margin-left:30px;" type="date" placeholder="checkout" id="checkout">
+        <button id="newbtn" style="margin-left:35%;margin-top:30px;width:150px;height:40px;border-radius: 15px;font-size:15px;border:2px solid white;color:white;background-color:#3F51B5">Search</button>
+
+    </form>
+        `
+            ul.append(li)
+        }
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        var travel = document.getElementById("holiday");
+        travel.addEventListener("click", hotels);
+
+        function hotels() {
+            window.location.href = "travel.html";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <title>Create Account</title>
+    <style>
+        #frm {
+            display: flex;
+        }
+        
+        #myform {
+            border: 1px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Create your Free account </h1>
+    <div>
+        <p> Create an account with your email</p>
+        <form id="myform" onsubmit="signup(event)" action="">
+
+            <label for="firstname">First Name:</label><br>
+            <input type="text" id="firstname" name="firstname"><br>
+            <label>Surname:</label><br>
+            <input type="text" id="lastname" name="lastname"><br>
+            <label>Email Address</label><br>
+            <input type="email" id="email"><br>
+            <label>Password</label><br>
+            <input type="password" id="password"><br>
+            <label>Confirm Password</label><br>
+            <input type="password" id="password1"><br>
+            <ul style="margin:none"> Expedia Rewards members get even more!
+                <ul>
+                    <li>Save money with Member Pricing</li>
+                    <li>Book free rewards travel with no blackout dates </li>
+                    <li>Get exclusive member deals and special offers</li>
+                </ul>
+
+            </ul>
+            <input type="checkbox">
+            <label>Please send me Expedia.co.in emails with travel deals,<br> special offers and other information.</label><br>
+            <p style="font-size: 15px;">By creating an account, I agree to the <span style="color:#303F9F">Expedia Terms of<br>Use opens in a new window, Privacy Policy opens in a new window, and<br>Expedia Rewards Terms and Conditions opens in a new window.</span>
+            </p><br>
+            <input type="submit" />
+
+        </form>
+
+    </div>
+    <script>
+        function signup(e) {
+            e.preventDefault();
+            let myform = document.getElementById("myform");
+            let fname = myform.firstname.value;
+            let Sname = myform.lastname.value;
+            let email = myform.email.value;
+            let password = myform.password.value;
+            let confirmpassword = myform.password1.value;
+            if (password !== confirmpassword) {
+                alert("password incorrect")
+                return false;
+
+            } else {
+                alert("account created successfully")
+            }
+            if (localStorage.getItem("users") === null) {
+                localStorage.setItem("users", JSON.stringify([]))
+
+            }
+            let user = {
+                fname,
+                Sname,
+                email,
+                password,
+                confirmpassword,
+
+            };
+            let arr = JSON.parse(localStorage.getItem("users"));
+            arr.push(user);
+            localStorage.setItem("users", JSON.stringify(arr));
+
+
+        }
+    </script>
+
+
+</body>
+
+</html>

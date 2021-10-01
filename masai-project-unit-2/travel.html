@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Travel</title>
+    <style>
+        * {
+            font-family: 'Lato', sans-serif;
+        }
+        
+        header {
+            width: 100%;
+            margin-top: 1%;
+            ;
+        }
+        
+        .navbar {
+            display: inline-block;
+            margin-left: 50%;
+        }
+        
+        .navbar>a:nth-child(1) {
+            color: #263238;
+            text-decoration: none;
+        }
+        
+        .navbar>a:nth-child(2) {
+            margin-left: 20px;
+            color: #263238;
+            text-decoration: none;
+        }
+        
+        .navbar>a:nth-child(3) {
+            margin-left: 20px;
+            color: #263238;
+            text-decoration: none;
+        }
+        
+        .navbar>#btn {
+            margin-left: 20px;
+            color: #263238;
+            border: none;
+            text-decoration: none;
+            background-color: white;
+            font-size: 15px;
+        }
+        
+        #rem {
+            width: 380px;
+            height: 450px;
+            border-radius: 15px;
+        }
+        
+        #bookings {
+            display: flex;
+            font-size: 12px;
+            padding-bottom: 10px;
+            font-size: 15px;
+            padding: 5px;
+        }
+        
+        #bookings>div:nth-child(2) {
+            flex-grow: 1;
+            padding: 5px;
+        }
+        
+        #sem {
+            width: 380px;
+            height: 450px;
+            border-radius: 15px;
+        }
+        
+        #bookings1 {
+            display: flex;
+            font-size: 11px;
+            padding-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        #bookings1>div:nth-child(2) {
+            flex-grow: 1;
+            padding: 5px;
+        }
+        
+        #content {
+            display: flex;
+            margin-left: 5%;
+            margin-right: 5%;
+            justify-content: space-evenly;
+        }
+        
+        #fem {
+            width: 380px;
+            height: 450px;
+            border-radius: 15px;
+        }
+        
+        #bookings2 {
+            display: flex;
+            font-size: 11px;
+            padding-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        #bookings2>div:nth-child(2) {
+            flex-grow: 1;
+            padding: 5px;
+        }
+        
+        #kem {
+            width: 380px;
+            height: 450px;
+            border-radius: 15px;
+        }
+        
+        #bookings3 {
+            display: flex;
+            font-size: 11px;
+            padding-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        #bookings3>div:nth-child(2) {
+            flex-grow: 1;
+            padding: 5px;
+        }
+        
+        #stem {
+            width: 380px;
+            height: 450px;
+            border-radius: 15px;
+        }
+        
+        #bookings4 {
+            display: flex;
+            font-size: 11px;
+            padding-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        #bookings4>div:nth-child(2) {
+            flex-grow: 1;
+            padding: 5px;
+        }
+        
+        #vem {
+            width: 380px;
+            height: 450px;
+            border-radius: 15px;
+        }
+        
+        #bookings5 {
+            display: flex;
+            font-size: 11px;
+            padding-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        #bookings5>div:nth-child(2) {
+            flex-grow: 1;
+            padding: 5px;
+        }
+        
+        #set1 {
+            display: flex;
+            margin-left: 5%;
+            margin-right: 5%;
+            justify-content: space-evenly;
+        }
+        
+        #cem {
+            width: 380px;
+            height: 450px;
+            border-radius: 15px;
+        }
+        
+        #bookings6 {
+            display: flex;
+            font-size: 11px;
+            padding-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        #bookings6>div:nth-child(2) {
+            flex-grow: 1;
+            padding: 5px;
+        }
+        
+        #pem {
+            width: 380px;
+            height: 450px;
+            border-radius: 15px;
+            margin-left: 55px;
+        }
+        
+        #bookings7 {
+            display: flex;
+            font-size: 11px;
+            padding-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        #bookings7>div:nth-child(2) {
+            flex-grow: 1;
+            padding: 5px;
+        }
+        
+        #set2 {
+            display: flex;
+            margin-left: 7%;
+        }
+        
+        .pointer {
+            width: 95%;
+            display: grid;
+            grid-template-columns: repeat(5, 200px);
+            grid-template-rows: repeat(9, 30px);
+            grid-column-gap: 5%;
+            grid-row-gap: 3%;
+            height: 350px;
+            padding: 10px;
+            background-color: #ECEFF1;
+            margin-left: 20px;
+            margin-top: 30px;
+            color: #283593;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://www.expedia.co.in/_dms/header/logo.svg?locale=en_GB&siteid=27&2" style="margin-left:5% ;display: inline-block;" />
+        <select>
+            <option value="More travel" >More travel</option>
+            <option value="Flights">Flights</option>
+            <option value="Cars">Cars</option>
+            <option value="Packages">Pacakages</option>
+            <option value="Stays">Stays</option>
+            <option value="Deals">Deals</option>
+            <option value="Group & meetings">Group & meetings</option>
+            <option value="Mobile">Mobile</option>                      
+        </select>
+        <nav class="navbar">
+            <a href="#English"><span style="margin-right:10px"><i class="fas fa-globe" id="language"></i></span>English</a>
+            <a href="#Support">Support</a>
+            <a href="#Trips">Trips</a>
+            <button id="btn">Sign<span style="margin-left: 5px;">in</span></button>
+        </nav>
+
+    </header>
+    <h1 style="text-align:center;">Travel Smarter - Book early &<br>save</h1>
+    <p style="text-align:center;color:#90A4AE">The early bird gets the deal. Save 20% on select hotels when you book 60 days in advance.</p>
+    <div id="content">
+        <div id="rem">
+            <img src="https://images.trvl-media.com/hotels/1000000/980000/974100/974008/4aa18282.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium" style="width:380px;height:180px;border-radius: 15px;" />
+            <h3 style="padding:3px;">The Claridges New Delhi</h3>
+            <p>New Delhi</p>
+            <p style="margin-top: 5px;font-size:15px">4.4/5(750 reviews)</p>
+            <div style="height:1px;width:300px;background-color:#90A4AE;display: inline-block;margin-top:5px"></div>
+            <p style="display:inline-block;margin-left:10px;border-radius:5px;background-color:#1B5E20;font-size: 15px;color:white;padding: 5px;">40% off</p>
+            <p style="margin-left:310px;">Rs 9,360</p>
+            <div id="bookings">
+                <div>Tue,28Dec-Thus,30Dec</div>
+                <div></div>
+                <div>per night</div>
+            </div>
+        </div>
+        <div id="sem">
+            <img src="https://images.trvl-media.com/hotels/65000000/64570000/64569200/64569133/d613a713.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium" style="width:380px;height:180px;border-radius: 15px;" />
+            <h3 style="padding:3px;">Zip by spree hotel clairs</h3>
+            <p>Gurugram</p>
+            <p style="margin-top: 5px;font-size:15px">4.4/5(750 reviews)</p>
+            <div style="height:1px;width:300px;background-color:#90A4AE;display: inline-block;margin-top:5px"></div>
+            <p style="display:inline-block;margin-left:10px;border-radius:5px;background-color:#1B5E20;font-size: 15px;color:white;padding: 5px;">20% off</p>
+            <p style="margin-left:310px;">Rs 2,729</p>
+            <div id="bookings1">
+                <div>Tue,28Dec-Thus,1Jan</div>
+                <div></div>
+                <div>per night</div>
+            </div>
+        </div>
+        <div id="fem">
+            <img src="https://images.trvl-media.com/hotels/5000000/4500000/4491800/4491716/e85f112c.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium" style="width:380px;height:180px;border-radius: 15px;" />
+            <h3 style="padding:3px;">Kohinoor elite</h3>
+            <p>Mumbai</p>
+            <p style="margin-top: 5px;font-size:15px">4.4/5(750 reviews)</p>
+            <div style="height:1px;width:300px;background-color:#90A4AE;display: inline-block;margin-top:5px"></div>
+            <p style="display:inline-block;margin-left:10px;border-radius:5px;background-color:#1B5E20;font-size: 15px;color:white;padding: 5px;">20% off</p>
+            <p style="margin-left:310px;">Rs 4,573</p>
+            <div id="bookings2">
+                <div>Tue,28Dec-Thus,1Jan</div>
+                <div></div>
+                <div>per night</div>
+            </div>
+        </div>
+    </div>
+    <div id="set1">
+        <div id="kem">
+            <img src="https://images.trvl-media.com/hotels/45000000/44120000/44112400/44112343/fcb583cb.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium" style="width:380px;height:180px;border-radius: 15px;" />
+            <h3 style="padding:3px;">YC Grand Boutique Hotel</h3>
+            <p>Bengaluru</p>
+            <p style="margin-top: 5px;font-size:15px">4.4/5(750 reviews)</p>
+            <div style="height:1px;width:300px;background-color:#90A4AE;display: inline-block;margin-top:5px"></div>
+            <p style="display:inline-block;margin-left:10px;border-radius:5px;background-color:#1B5E20;font-size: 15px;color:white;padding: 5px;">40% off</p>
+            <p style="margin-left:310px;">Rs 1,510</p>
+            <div id="bookings3">
+                <div>Tue,28Dec-Thus,30Dec</div>
+                <div></div>
+                <div>per night</div>
+            </div>
+        </div>
+        <div id="stem">
+            <img src="https://images.trvl-media.com/hotels/2000000/1920000/1911600/1911552/229808bc.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium" style="width:380px;height:180px;border-radius: 15px;" />
+            <h3 style="padding:3px;">Esrer do Mar Beach Resort </h3>
+            <p>Goa</p>
+            <p style="margin-top: 5px;font-size:15px">4.4/5(750 reviews)</p>
+            <div style="height:1px;width:300px;background-color:#90A4AE;display: inline-block;margin-top:5px"></div>
+            <p style="display:inline-block;margin-left:10px;border-radius:5px;background-color:#1B5E20;font-size: 15px;color:white;padding: 5px;">40% off</p>
+            <p style="margin-left:310px;">Rs 9000</p>
+            <div id="bookings4">
+                <div>Tue,28Dec-Thus,30Dec</div>
+                <div></div>
+                <div>per night</div>
+            </div>
+        </div>
+        <div id="vem">
+            <img src="https://images.trvl-media.com/hotels/19000000/18450000/18445600/18445600/66e893ab.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium" style="width:380px;height:180px;border-radius: 15px;" />
+            <h3 style="padding:3px;">Hotel Rajpur heights</h3>
+            <p>Dehradun</p>
+            <p style="margin-top: 5px;font-size:15px">4.4/5(750 reviews)</p>
+            <div style="height:1px;width:300px;background-color:#90A4AE;display: inline-block;margin-top:5px"></div>
+            <p style="display:inline-block;margin-left:10px;border-radius:5px;background-color:#1B5E20;font-size: 15px;color:white;padding: 5px;">40% off</p>
+            <p style="margin-left:310px;">Rs 1,510</p>
+            <div id="bookings5">
+                <div>Tue,28Dec-Thus,30Dec</div>
+                <div></div>
+                <div>per night</div>
+            </div>
+        </div>
+    </div>
+    <div id="set2">
+        <div id="cem">
+            <img src="https://images.trvl-media.com/hotels/37000000/36100000/36094900/36094810/e34a78d0.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium" style="width:380px;height:180px;border-radius: 15px;" />
+            <h3 style="padding:3px;">The Weekend Address</h3>
+            <p>Dumas</p>
+            <p style="margin-top: 5px;font-size:15px">4.4/5(750 reviews)</p>
+            <div style="height:1px;width:300px;background-color:#90A4AE;display: inline-block;margin-top:5px"></div>
+            <p style="display:inline-block;margin-left:10px;border-radius:5px;background-color:#1B5E20;font-size: 15px;color:white;padding: 5px;">40% off</p>
+            <p style="margin-left:310px;">Rs 1,510</p>
+            <div id="bookings6">
+                <div>Tue,28Dec-Thus,30Dec</div>
+                <div></div>
+                <div>per night</div>
+            </div>
+        </div>
+        <div id="pem">
+            <img src="https://images.trvl-media.com/hotels/24000000/23240000/23236100/23236081/7064b52e.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium" style="width:380px;height:180px;border-radius: 15px;" />
+            <h3 style="padding:3px;">The Weekend Address</h3>
+            <p>Hotel Royal Oak</p>
+            <p style="margin-top: 5px;font-size:15px">4.4/5(750 reviews)</p>
+            <div style="height:1px;width:300px;background-color:#90A4AE;display: inline-block;margin-top:5px"></div>
+            <p style="display:inline-block;margin-left:10px;border-radius:5px;background-color:#1B5E20;font-size: 15px;color:white;padding: 5px;">40% off</p>
+            <p style="margin-left:310px;">Rs 1,510</p>
+            <div id="bookings7">
+                <div>Tue,28Dec-Thus,30Dec</div>
+                <div></div>
+                <div>per night</div>
+            </div>
+
+        </div>
+
+    </div>
+    <form style="width:65%;padding:50px;border-radius:5px;margin:auto;">
+        <i style="position:absolute;margin-top:10px;padding-left:15px;" class="fa fa-map-marker"></i>
+        <input style="width:250px;height:30px;border-radius: 5px;text-align:center;font-size:20px;" type="text" id="going" placeholder="Going to">
+        <input style="width:200px;height:30px;border-radius: 5px;" type="date" placeholder="checkin" id="checkin">
+        <input style="width:200px;height:30px;border-radius: 5px;" type="date" placeholder="checkout" id="checkout">
+        <i style="position:absolute;;margin-top:10px;padding-left:15px; " class="fas fa-user"></i>
+        <input style="width:220px;height:30px;border-radius: 5px;text-align:center;font-size:20px;" type="text" placeholder="Travellers" id="travellers">
+        <button id="newbtn" style="margin-left:45%;margin-top:30px;width:150px;height:40px;border-radius: 15px;font-size:15px;border:2px solid white;color:white;background-color:#3F51B5;">Search</button>
+
+
+    </form>
+    <ul style="width:70%;margin:auto">
+        <h3 style=font-size:25px>Terms and Conditions</h3>
+        <li>Offers are valid for stay dates of a minimum of 60 days from today and must be booked at least 60 days from today. Promotion start and end times will correspond with applicable hotel's time zone</li>
+        <li>Discount will be applied to the regular price of selected hotels (excluding applicable taxes and other fees).</li>
+        <li>Hotel price displayed is the quoted price for the specified period of stay and includes the promotional discount. Hotel prices are per room rate and calculated on a double occupancy basis based on the cheapest double room available and excludes
+            taxes and surcharges.</li>
+        <li>Other restrictions may apply, including a minimum night stay, black-out dates, room availability and pre-booking arrangements. Please check individual hotel for details.</li>
+        <li>Prices are updated regularly and are accurate when published, but these great deals often sell out fast, so prices may change if availability has gone.</li>
+        <li>Flight + hotel package prices displayed include accommodation plus round-trip airfare for the specified period shown. The price is based on one person, calculated according to the hotel occupancy and the minimum ticket price, including taxes and
+            surcharges unless stated otherwise. Price varies by date, departure city and availability. Other restrictions may apply, including a minimum night stay, black-out dates, room availability and pre-booking arrangements.</li>
+        <li>Flight prices displayed are “from” prices based on the lowest available fare on the specified travel dates and will be confirmed prior to any payment being made. This price is not guaranteed until paid in full by cleared funds and your tickets
+            are issued. Fees may apply for checked baggage. Payment made by credit card may also incur a credit card service fee. Flight prices shown exclude any booking fees that may be applicable. Total purchase price, inclusive of any applicable fees,
+            is displayed on the flight details page prior to booking confirmation. Blackout dates and other restrictions may apply. Fares may be non-refundable and are not transferable. Name changes may not be permitted.</li>
+        <li>Additional baggage charges may apply to flights or to flight + hotel packages, including flights provided by low cost airlines.</li>
+        <li>Offers are subject to limited availability and may be discontinued without notice.</li>
+        <li>Expedia’s usual booking terms and conditions apply.</li>
+    </ul>
+    <div class="pointer">
+        <div><img src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg"></div>
+        <div style="color:black">Company</div>
+        <div style="color:black">Explore</div>
+        <div style="color:black">Terms and Policies</div>
+        <div style="color:black">Help</div>
+        <div></div>
+        <div>About Us</div>
+        <div>India travel guide</div>
+        <div>Privacy Statement</div>
+        <div>Support</div>
+        <div></div>
+        <div>Jobs</div>
+        <div>Hotels in India</div>
+        <div>Terms of use</div>
+        <div>Change or cancel your booking</div>
+        <div></div>
+        <div>List your property</div>
+        <div>Holiday rentals in India</div>
+        <div></div>
+        <div>Refund process and timelines</div>
+        <div></div>
+        <div>Partnerships</div>
+        <div>Holiday packages in India</div>
+        <div></div>
+        <div>Book a flight using an airline credit</div>
+        <div></div>
+        <div></div>
+        <div>Domestic flights</div>
+        <div></div>
+        <div>International travel documents</div>
+        <div></div>
+        <div></div>
+        <div>Car hire in India</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>All accommodation types</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>Travel blog</div>
+    </div>
+    <div id="line"></div>
+    <div>
+        <img src="https://thumbnails.trvl-media.com/DJpMY9W-yLbhqAzbOMWy4M_j1OU=/images.trvl-media.com/media/content/expind/images/sg/secure.png" style="margin-left:45%;margin-top: 50px;" />
+        <P style="font-size:12px;color:#455A64;margin-left:150px;">© 2021 Expedia, Inc., an Expedia Group company / Expedia Asia Holdings Mauritius / BEX Travel Asia Pte. Ltd. All rights reserved. Expedia and the Airplane Logo are trademarks or registered trademarks of Expedia, Inc.</P>
+    </div>
+
+
+
+</body>
+
+</html>

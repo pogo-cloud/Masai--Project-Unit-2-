@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-----------form1---------->
+    <form style="width:62%;padding:50px;border-radius:5px;">
+        <i style="position:absolute;margin-top:10px;padding-left:15px;" class="fa fa-map-marker"></i>
+        <input style="width:250px;height:30px;border-radius: 5px;text-align:center;font-size:20px;" type="text" id="going" placeholder="Going to">
+        <input style="width:200px;height:30px;border-radius: 5px;" type="date" placeholder="checkin" id="checkin">
+        <input style="width:200px;height:30px;border-radius: 5px;" type="date" placeholder="checkout" id="checkout">
+        <i style="position:absolute;margin-top:10px;padding-left:15px; " class="fas fa-user"></i>
+        <input style="width:220px;height:30px;border-radius: 5px;text-align:center;font-size:20px;" type="text" placeholder="Travellers" id="travellers">
+        <button id="newbtn" style="margin-left:45%;margin-top:30px;width:150px;height:40px;border-radius: 15px;font-size:15px;border:2px solid white;color:white;background-color:#3F51B5">Search</button>
+
+
+    </form>
+    <!-------------form2----------------->
+    <form style="width:65%;padding:50px;border-radius:5px;background-color:#ECF0F1 ;">
+        <div style="display:flex;flex-direction: row;justify-content: space-evenly;">
+            <label id="Return" style="border-radius:5px;width:60px;height:30px;background-color:#3949AB ;color:blanchedalmond;padding-left:5px;">Return</label>
+            <label id="Oneway" style="border-radius:5px;width:60px;height:30px;background-color:#3949AB ;color:blanchedalmond;padding-left:5px;">Oneway</label>
+            <label id="MultiCity" style="border-radius:5px;width:60px;height:30px;background-color:#3949AB ;color:blanchedalmond;padding-left:5px;">MultiCity</label>
+        </div>
+        <div>
+            <i style="position:absolute;margin-top:10px;padding-left:15px;" class="fa fa-map-marker"></i>
+            <input style="width:250px;height:30px;border-radius: 5px;text-align:center;font-size:20px;" type="text" id="going" placeholder="Leaving From">
+            <i class="fas fa-exchange-alt"></i>
+            <i style="position:absolute;margin-top:10px;padding-left:15px;" class="fa fa-map-marker"></i>
+            <input style="width:250px;height:30px;border-radius: 5px;text-align:center;font-size:20px;" type="text" id="going" placeholder="Going to">
+            <input style="width:200px;height:30px;border-radius: 5px;" type="date" placeholder="checkin" id="checkin">
+            <input style="width:200px;height:30px;border-radius: 5px;" type="date" placeholder="checkout" id="checkout">
+            <button id="newbtn" style="margin-left:45%;margin-top:30px;width:150px;height:40px;border-radius: 15px;font-size:15px;border:2px solid white;color:white;background-color:#3F51B5">Search</button>
+
+        </div>
+    </form>
+    <form style="width:50%;padding:50px;border-radius:5px;background-color: #ECF0F1;">
+        <div>
+            <label id="Return" style="border-radius:5px;width:60px;height:30px;background-color:#3949AB ;color:blanchedalmond;padding-left:5px;">Return</label>
+            <label id="Oneway" style="border-radius:5px;width:60px;height:30px;background-color:#3949AB ;color:blanchedalmond;padding-left:5px;margin-left:180px">Oneway</label>
+        </div>
+        <div>
+            <i style="position:absolute;margin-top:10px;padding-left:15px;" class="fa fa-map-marker"></i>
+            <input style="width:350px;height:30px;border-radius: 5px;text-align:center;font-size:20px;" type="text" id="going" placeholder="Pick up">
+            <input style="width:350px;height:30px;border-radius: 5px;text-align:center;font-size:20px;margin-left: 30px;" type="text" id="going" placeholder="Same as Pick up">
+
+        </div>
+        <div style="display:flex;margin-top:20px">
+            <input style="width:200px;height:30px;border-radius: 5px;" type="date" placeholder="checkin" id="checkin">
+            <input style="width:200px;height:30px;border-radius: 5px;margin-left:60px" type="date" placeholder="checkout" id="checkout">
+            <input style="margin-left:70px ;border-radius:5px;" type="time" id="appt" name="appt" placeholder="checkintime">
+            <input style="margin-left:60px;;border-radius:5px;" type="time" id="appt" name="appt" placeholder="checkouttime">
+
+        </div>
+        <button id="newbtn" style="margin-left:45%;margin-top:30px;width:150px;height:40px;border-radius: 15px;font-size:15px;border:2px solid white;color:white;background-color:#3F51B5">Search</button>
+
+
+    </form>
+    <form style="width:62%;padding:50px;border-radius:5px;border-radius:5px;background-color: #ECF0F1;">
+        <i style="position:absolute;margin-top:10px;padding-left:15px;" class="fa fa-map-marker"></i>
+        <input style="width:250px;height:30px;border-radius: 5px;text-align:center;font-size:20px;" type="text" id="going" placeholder="Things to do in">
+        <input style="width:200px;height:30px;border-radius: 5px;margin-left:30px;" type="date" placeholder="checkin" id="checkin">
+        <input style="width:200px;height:30px;border-radius: 5px;margin-left:30px;" type="date" placeholder="checkout" id="checkout">
+        <button id="newbtn" style="margin-left:35%;margin-top:30px;width:150px;height:40px;border-radius: 15px;font-size:15px;border:2px solid white;color:white;background-color:#3F51B5">Search</button>
+
+    </form>
+
+</body>
+
+</html>
